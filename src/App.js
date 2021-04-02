@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React,{ Component } from 'react';
+import Cabecera from './components/Cabecera';
 import './App.css';
 
+const manejaClick = texto =>{
+  console.log(texto)
+}
+
 function App() {
+
+  const miau='Bienvenido miau'
+  const guau='Bienvenido guau'
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <Cabecera miau={miau} manejaClick={manejaClick}/>
+      <Cabecera miau={guau} manejaClick={manejaClick}/>
+      
+      <p className="App-intro">
+          Hola mundo
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
     </div>
   );
 }
+
+//export const hola = 'hola'
 
 export default App;
